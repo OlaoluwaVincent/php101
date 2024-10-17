@@ -35,6 +35,7 @@ thereafter,
 - Setup an account with mail [PHPMailer](https://mailtrap.io/home)
 - Find your way to your way to integration **Email Testing / Inboxes / ⚙ /**
 - Under **code samples** select PHP <> PHPMailer. Plus copy all
+- Set up your .env, could be at the root directory or in the contact-form directory, just handle `Dotenv\Dotenv::createImmutable()` appropraitely.
 - Edit content in `/contact-form/config/app.php` accordingly, else, you'd be sending me mails... ⚰
 - Edit the `$phpmailer` values in the `/contact-form/handler/mail.php` accordingly.
   **You not sure how to go about this, hmmm 🤔.... Yeah, take a nap 😊**

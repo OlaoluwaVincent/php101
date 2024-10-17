@@ -1,0 +1,146 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    --error: #dc3545;
+    --success: #198754;
+    --primary: #7952b3;
+    --secondary: #61428f;
+    --border-color: #61428f;
+    --button-text: #fff;
+    --button-focus: 0 0 0 3px rgb(121, 82, 179, 0.25);
+    /* link color */
+    --link-color: #7952b3;
+    /* text */
+    --text-main: #363636;
+    --text-bright: #000;
+    /* background */
+    --background-body: #f9fafb;
+    --main-bg: #fff;
+    --main-border: transparent;
+
+    /* input */
+    --input-text-color: #000;
+    --input-placeholder-color: #c2c2c2;
+    --input-border-color: #ccc;
+    --input-background-color: #fff;
+    --input-disabled: #f5f5f5;
+    --input-focus: 0 0 0 3px rgb(121, 82, 179, 0.25);
+    --box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px,
+      rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* error & success */
+    --error: #dc3545;
+    --success: #198754;
+    /* button */
+    --primary: #444c56;
+    --secondary: #212529;
+    --border-color: #1c1f23;
+    --button-text: #fff;
+    --button-focus: 0 0 0 0.25rem rgb(66 70 73 / 50%);
+
+    /* link color */
+    --link-color: #0d6efd;
+
+    /* text */
+    --text-main: #adbac7;
+    --text-bright: #adbac7;
+
+    /* background */
+    --background-body: #22272e;
+    --main-bg: #22272e;
+    --main-border: 1px solid #444c56;
+
+    /* input */
+    --input-text-color: #adbac7;
+    --input-placeholder-color: #4c545e;
+    --input-background-color: #22272e;
+    --input-border-color: #373e47;
+    --input-disabled: #373e47;
+    --input-focus: 0 0 0 2pt rgb(49, 132, 253, 0.5);
+    --box-shadow: none;
+  }
+}
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  padding: 0 1rem;
+  word-wrap: break-word;
+  color: var(--text-main);
+  background: var(--background-body);
+  text-rendering: optimizeLegibility;
+
+  /* center */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+li {
+  margin-left: 1.5rem;
+}
+
+.flash_message {
+  color: var(--error) !important;
+}
+
+form {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form > h2.title {
+  font-size: 1.3rem;
+  letter-spacing: 5px;
+  margin-block: 10px;
+}
+form > .form_group {
+  background: var(--main-bg);
+  color: var(--text-main);
+  padding-inline: 10px;
+  padding-block: 20px;
+  border: 2px solid var(--text-bright);
+}
+
+.form-group > label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group > label > input[type="file"] {
+  background: var(--background-body);
+}
+
+.btn {
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  background: var(--success);
+  color: #c2c2c2;
+}

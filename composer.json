@@ -1,0 +1,17 @@
+{
+    "name": "olaoluwavincent/php101",
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Olaoluwavincent\\Php101\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Olaoluwavincent",
+            "email": "Olaoluwavincent@gmail.com"
+        }
+    ]
+}

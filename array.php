@@ -8,6 +8,7 @@ print_r($scores);
 echo ("<pre/>");
 // Accessing bt index
 
+
 $scores[1] = 4;
 unset($scores[0]);
 

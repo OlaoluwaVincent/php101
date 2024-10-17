@@ -27,7 +27,7 @@ composer init
 Kindly follow the instructions to get you up and running, then....
 
 ```bash
-composer composer require phpmailer/phpmailer:^6.9
+composer require phpmailer/phpmailer:^6.9
 ```
 
 thereafter,

@@ -34,12 +34,12 @@ thereafter,
 
 - Setup an account with mail [PHPMailer](https://mailtrap.io/home)
 - Find your way to your way to integration **Email Testing / Inboxes / ⚙ /**
-- Under **code samples** selecte PHP <> PHPMailer.
+- Under **code samples** select PHP <> PHPMailer. Plus copy all
 - Edit content in `/contact-form/config/app.php` accordingly, else, you'd be sending me mails... ⚰
-- Edit the phpmailer values in the `/contact-form/handler/mail.php` accordingly
+- Edit the `$phpmailer` values in the `/contact-form/handler/mail.php` accordingly.
   **You not sure how to go about this, hmmm 🤔.... Yeah, take a nap 😊**
 
-then run **You can specify a different port**
+then run and visit (**You can specify a different port**)
 
 ```bash
 php -S localhost:8888

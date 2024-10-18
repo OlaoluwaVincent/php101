@@ -200,22 +200,22 @@ function is_secure(array $data, string $field): bool
  *
  * @return PDO
  */
-function db(): PDO
-{
-    static $pdo;
+// function db(): PDO
+// {
+//     static $pdo;
 
-    // If the connection is not initialized, connect to the SQLite database
-    if (!$pdo) {
-        $pdo = new PDO(
-            "sqlite:my_database.db",
-            null,
-            null,
-            [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
-        );
-    }
+//     // If the connection is not initialized, connect to the SQLite database
+//     if (!$pdo) {
+//         $pdo = new PDO(
+//             "sqlite:my_database.db",
+//             null,
+//             null,
+//             [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
+//         );
+//     }
 
-    return $pdo;
-}
+//     return $pdo;
+// }
 
 /**
  * Return true if the $value is unique in the column of a table
@@ -225,20 +225,20 @@ function db(): PDO
  * @param string $column
  * @return bool
  */
-function is_unique(array $data, string $field, string $table, string $column): bool
-{
-    if (!isset($data[$field])) {
-        return true;
-    }
+// function is_unique(array $data, string $field, string $table, string $column): bool
+// {
+//     if (!isset($data[$field])) {
+//         return true;
+//     }
 
-    // SQL query to check for uniqueness in the specified column
-    $sql = "SELECT $column FROM $table WHERE $column = :value";
+//     // SQL query to check for uniqueness in the specified column
+//     $sql = "SELECT $column FROM $table WHERE $column = :value";
 
-    $stmt = db()->prepare($sql);
-    $stmt->bindValue(":value", $data[$field]);
+//     $stmt = db()->prepare($sql);
+//     $stmt->bindValue(":value", $data[$field]);
 
-    $stmt->execute();
+//     $stmt->execute();
 
-    // Return true if no record is found (i.e., value is unique)
-    return $stmt->fetchColumn() === false;
-}
+//     // Return true if no record is found (i.e., value is unique)
+//     return $stmt->fetchColumn() === false;
+// }

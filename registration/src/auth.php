@@ -24,3 +24,17 @@ function register_user(string $email, string $username, string $password, bool $
 
     return $statement->execute();
 }
+
+
+function is_user_logged_in(): bool
+{
+    return isset($_SESSION['username']);
+}
+
+
+function require_login(): void
+{
+    if (!is_user_logged_in()) {
+        redirect_to('../public/login.php');
+    }
+}

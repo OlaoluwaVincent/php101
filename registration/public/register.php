@@ -3,6 +3,7 @@
 // ini_set('display_errors', 1);
 require __DIR__ . '/../src/bootstrap.php';
 require __DIR__ . '/../src/register.php';
+
 ?>
 
 <?php view('header', ['title' => 'Register']) ?>
